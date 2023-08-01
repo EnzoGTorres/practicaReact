@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header'
 
+// Fuera del componente de react podemos usar JS normalmente
+// En el caso de que necesitemos "escaparnos" de React dentro del componente para hacer comentarios, debemos encerrar el escape entre llaves// 
+// Al iniciar a buildear la app necesitarmos apuntar en VS que vamos a trabajar en JSX en la barra de abajo
 function App() {
+
+  let nombre = "Enzo"
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    /* En vez de usar una etiqueta div podemos usar un "fragmento" como a continuación*/
+    <>
+      {/*Comentarios en JSX*/}
+    {/*<header iid="header" ClassName="header">
+      <h1>Página de prueba</h1>
+  </header>*/}
+
+    <Header />
+
+    <main>
+      <h2>Home</h2>
+      <p>Bienvenido {nombre}</p>
+    </main>
+    
+    <footer>
+
+    </footer>
+    </>
   );
 }
 
